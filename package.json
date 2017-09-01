@@ -45,7 +45,8 @@
     "watch-all": "npm run watch & npm run watch-test",
     "watch-test": "cross-env NODE_ENV=test webpack --watch",
     "webpack": "webpack",
-    "win-renpm": "powershell ./tools/windows/re-npm.ps1"
+    "win-renpm": "powershell ./tools/windows/re-npm.ps1",
+    "ipfs": "wget https://unpkg.com/ipfs/dist/index.min.js -O app/extensions/ipfs/js/ipfs.min.js"
   },
   "repository": "brave/browser-laptop",
   "author": {
@@ -148,6 +149,7 @@
     "electron-chromedriver": "^1.7.1",
     "electron-packager": "brave/electron-packager",
     "electron-prebuilt": "brave/electron-prebuilt",
+    "electron-rebuild": "^1.5.11",
     "empty-port": "0.0.2",
     "enzyme": "^2.9.1",
     "flow-bin": "^0.22.1",

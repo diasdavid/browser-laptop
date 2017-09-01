@@ -33,7 +33,8 @@ module.exports = {
     COOKIEBLOCK: 'cookieblock', // block 3p cookies and referer
     COOKIEBLOCK_ALL: 'cookieblockAll', // block all cookies and referer
     SITEHACK: 'siteHacks',
-    WEBTORRENT: 'webtorrent'
+    WEBTORRENT: 'webtorrent',
+    IPFS: 'ipfs'
     // ... other optional resource files are identified by uuid such as for regional adblock
   },
   cookieblock: {
@@ -93,6 +94,9 @@ module.exports = {
     enabled: true
   },
   webtorrent: {
+    enabled: true
+  },
+  ipfs: {
     enabled: true
   },
   adInsertion: {
@@ -207,6 +211,7 @@ module.exports = {
     'advanced.default-zoom-level': null,
     'advanced.pdfjs-enabled': true,
     'advanced.torrent-viewer-enabled': true,
+    'advanced.ipfs-enabled': true,
     'advanced.smooth-scroll-enabled': false,
     'advanced.send-crash-reports': true,
     'advanced.send-usage-statistics': false,

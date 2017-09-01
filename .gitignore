@@ -1,3 +1,6 @@
+package-lock.json
+yarn.lock
+
 # Logs
 logs
 *.log
@@ -54,6 +57,8 @@ Brave.tar.bz2
 app/extensions/gen
 app/extensions/brave/gen
 app/extensions/torrent/gen
+app/extensions/ipfs/gen
+
 *.pfx
 buildConfig.js
 

@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "IPFS",
+  "version": "0.1.0",
+  "default_locale": "en",
+  "description": "InterPlanetary FileSystem",
+  "icons": {
+    "128": "img/ipfs-128.png",
+    "48": "img/ipfs-48.png",
+    "16": "img/ipfs-16.png"
+  },
+  "offline_enabled": true,
+  "background": {
+    "page": "ipfs.html",
+    "persistent": true
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'"
+}

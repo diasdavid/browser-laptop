@@ -71,6 +71,7 @@ const settings = {
   HARDWARE_ACCELERATION_ENABLED: 'advanced.hardware-acceleration-enabled',
   PDFJS_ENABLED: 'advanced.pdfjs-enabled',
   TORRENT_VIEWER_ENABLED: 'advanced.torrent-viewer-enabled',
+  IPFS_ENABLED: 'advanced.ipfs-enabled',
   DEFAULT_ZOOM_LEVEL: 'advanced.default-zoom-level',
   SMOOTH_SCROLL_ENABLED: 'advanced.smooth-scroll-enabled',
   SEND_CRASH_REPORTS: 'advanced.send-crash-reports',

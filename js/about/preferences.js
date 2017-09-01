@@ -819,6 +819,7 @@ class AboutPreferences extends React.Component {
       settings.LANGUAGE,
       settings.PDFJS_ENABLED,
       settings.TORRENT_VIEWER_ENABLED,
+      settings.IPFS_ENABLED,
       settings.SMOOTH_SCROLL_ENABLED,
       settings.SEND_CRASH_REPORTS,
       settings.UPDATE_TO_PREVIEW_RELEASES

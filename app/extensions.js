@@ -415,13 +415,17 @@ module.exports.init = () => {
     return object
   }
 
-  let loadExtension = (extensionId, extensionPath, manifest = {}, manifestLocation = 'unpacked') => {
-    if (extensionId === config.PDFJSExtensionId) {
+  const loadExtension = (extensionId, extensionPath, manifest = {}, manifestLocation = 'unpacked') => {
+    if (extensionId === config.PDFJSExtensionId ||
+        extensionId === config.ipfsExtensionId) {
       manifestLocation = 'component'
     }
-    if (!extensionInfo.isLoaded(extensionId) && !extensionInfo.isLoading(extensionId)) {
+    if (!extensionInfo.isLoaded(extensionId) &&
+        !extensionInfo.isLoading(extensionId)) {
       extensionInfo.setState(extensionId, extensionStates.LOADING)
-      if (extensionId === config.braveExtensionId || extensionId === config.torrentExtensionId || extensionId === config.syncExtensionId) {
+      if (extensionId === config.braveExtensionId ||
+          extensionId === config.torrentExtensionId ||
+          extensionId === config.syncExtensionId) {
         session.defaultSession.extensions.load(extensionPath, manifest, manifestLocation)
         return
       }
@@ -430,6 +434,7 @@ module.exports.init = () => {
       // just a safety net.
       fs.exists(path.join(extensionPath, 'manifest.json'), (exists) => {
         if (exists) {
+          console.log('Loading:', extensionId, manifestLocation)
           session.defaultSession.extensions.load(extensionPath, manifest, manifestLocation)
         } else {
           // This is an error condition, but we can recover.
@@ -454,18 +459,21 @@ module.exports.init = () => {
       const extensions = extensionState.getExtensions(appStore.getState())
       const extensionPath = extensions.getIn([extensionId, 'filePath'])
       if (extensionPath) {
-        // Otheriwse just install it
+        // Otherwise just install it
         loadExtension(extensionId, extensionPath)
       }
     }
   }
 
-  // Manually install the braveExtension and torrentExtension
+  // Manually install the braveExtension, torrentExtension and ipfsExtension
+
+  // braveExtension
   extensionInfo.setState(config.braveExtensionId, extensionStates.REGISTERED)
   loadExtension(config.braveExtensionId, getExtensionsPath('brave'), generateBraveManifest(), 'component')
   extensionInfo.setState(config.syncExtensionId, extensionStates.REGISTERED)
   loadExtension(config.syncExtensionId, getExtensionsPath('brave'), generateSyncManifest(), 'unpacked')
 
+  // torrentExtension
   if (getSetting(settings.TORRENT_VIEWER_ENABLED)) {
     extensionInfo.setState(config.torrentExtensionId, extensionStates.REGISTERED)
     loadExtension(config.torrentExtensionId, getExtensionsPath('torrent'), generateTorrentManifest(), 'component')
@@ -473,6 +481,10 @@ module.exports.init = () => {
     extensionInfo.setState(config.torrentExtensionId, extensionStates.DISABLED)
     extensionActions.extensionDisabled(config.torrentExtensionId)
   }
+
+  // ipfsExtension
+  extensionInfo.setState(config.ipfsExtensionId, extensionStates.REGISTERED)
+  loadExtension(config.ipfsExtensionId, getExtensionsPath('ipfs'))
 
   let registerComponents = (diff) => {
     if (getSetting(settings.PDFJS_ENABLED)) {

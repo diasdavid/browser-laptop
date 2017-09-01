@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="availableLanguages" content="">
+    <meta name="defaultLanguage" content="en-US">
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'none';
+      form-action http://localhost:*;
+      script-src 'self' 'unsafe-eval';
+      img-src * data: file: chrome-extension:;
+      style-src 'self' 'unsafe-inline'; font-src 'self'; 
+      connect-src 'self' wss://* ;
+      object-src 'self';
+      plugin-types application/browser-plugin"
+    />
+    <meta name="referrer" content="no-referrer">
+    <title>IPFS</title>
+    <script src="js/ipfs.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/some-other.js"></script>
+  </head>
+  <body>
+    <h1>IPFS</h1>
+  </body>
+</html>

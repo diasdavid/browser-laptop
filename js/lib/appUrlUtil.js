@@ -48,6 +48,18 @@ module.exports.getTorrentExtUrl = function (relativeUrl) {
   return 'chrome-extension://' + config.torrentExtensionId + '/' + relativeUrl
 }
 
+/**
+ * Gets the URL of a page hosted by the ipfsExtension
+ * Returns 'chrome-extension://<...>'
+ */
+module.exports.getIpfsExtUrl = function (relativeUrl) {
+  if (relativeUrl === undefined) {
+    relativeUrl = ''
+  }
+
+  return 'chrome-extension://' + config.ipfsExtensionId + '/' + relativeUrl
+}
+
 module.exports.getExtensionsPath = function (extensionDir) {
   return (process.env.NODE_ENV !== 'development' && process.env.NODE_ENV !== 'test')
     // the path is different for release builds because extensions are not in the asar file
@@ -208,6 +220,47 @@ module.exports.isSourceMagnetUrl = function (input) {
  */
 module.exports.isTargetMagnetUrl = function (input) {
   return !!module.exports.getSourceMagnetUrl(input)
+}
+
+/**
+ * Obtains the target URL associated with a IPFS path
+ * Returns null if the input is not a IPFS path
+ * Example: getTargetIpfsPath('ipfs:/...') -> 'chrome-extension://<...>.html#/ipfs/...'
+ */
+module.exports.getTargetIpfsPath = function (input) {
+  if (!input.startsWith('ipfs://') &&
+     !input.startsWith('dweb:')) {
+    return null
+  }
+  const url = module.exports.getIpfsExtUrl('ipfs.html')
+  return [url, input].join('#')
+}
+
+/**
+ * Obtains the source IPFS Path associated with a target URL
+ * Returns null if the input is not the local URL for a IPFS Path
+ * Example: getSourceIPFSPath('chrome-extension://<...>.html#/ipfs/...') -> 'ipfs:/:...'
+ */
+module.exports.getSourceIPFSPath = function (input) {
+  if (getBaseUrl(input) !== module.exports.getIpfsExtUrl('ipfs.html')) return null
+  const url = decodeURIComponent(getHash(input))
+  return url
+}
+
+/**
+ * Checks if the input looks like a magnet: URL
+ * Example: isSourceIpfsPath('ipfs:/..') -> true
+ */
+module.exports.isSourceIpfsPath = function (input) {
+  return !!module.exports.getTargetIpfsPath(input)
+}
+
+/*
+ * Checks if the input looks like the local URL for a IPFS Path
+ * Example: isSourceIpfsPath('chrome-extension://<...>.html#/ipfs/') -> true
+ */
+module.exports.isTargetIPFSPath = function (input) {
+  return !!module.exports.getSourceIPFSPath(input)
 }
 
 /**

@@ -209,6 +209,7 @@ AppStore
     'advanced.send-usage-statistics': boolean, // true or undefined if usage reports should be sent
     'advanced.smooth-scroll-enabled': boolean, // false if smooth scrolling should be explicitly disabled
     'advanced.torrent-viewer-enabled': boolean, // whether to render magnet links in the browser
+    'advanced.ipfs-enabled': boolean, // whether to use IPFS to render ipfs:// or dweb: links in the browser
     'bookmarks.toolbar.show': boolean, // true if the bookmakrs toolbar should be shown
     'bookmarks.toolbar.showFavicon': boolean, // true if bookmark favicons should be shown on the bookmarks toolbar
     'bookmarks.toolbar.showOnlyFavicon': boolean, // true if only favicons should be shown on the bookmarks toolbar
