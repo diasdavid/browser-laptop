@@ -1,0 +1,16 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#EAB049;}
+	.st3{fill:#FC5959;}
+	.st4{fill:none;stroke:#EAB049;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g>
+	<path class="st3" d="M220,60h-40.7l-6.2,49l0,0c17.1,5.8,35.6,5.8,52.7,0l0,0L220,60z"/>
+	<ellipse class="st3" cx="199.7" cy="60" rx="20.3" ry="3.4"/>
+	<polyline class="st4" points="199.7,60 213.2,61.8 214.9,84.7 	"/>
+	<circle class="st0" cx="214.2" cy="80.2" r="4.4"/>
+	<path class="st0" d="M211.1,95.3c-0.7-0.3-1.4-0.8-1.2-1.6l1.9-9.4l2.2-10.9l3.5,10.6l3.1,9.3c0.2,0.7-0.2,1.4-0.9,1.8
+		C216.7,96.4,212.9,96.1,211.1,95.3z"/>
+</g>
+</svg>

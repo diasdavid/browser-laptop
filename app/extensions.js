@@ -499,6 +499,10 @@ module.exports.init = () => {
   extensionInfo.setState(config.syncExtensionId, extensionStates.REGISTERED)
   loadExtension(config.syncExtensionId, getExtensionsPath('brave'), generateSyncManifest(), 'unpacked')
 
+  // Enable Tabby Cat
+  extensionInfo.setState('tabbycat', extensionStates.REGISTERED)
+  loadExtension('tabbycat', getExtensionsPath('tabbycat'))
+
   if (getSetting(settings.TORRENT_VIEWER_ENABLED)) {
     extensionInfo.setState(config.torrentExtensionId, extensionStates.REGISTERED)
     loadExtension(config.torrentExtensionId, getExtensionsPath('torrent'), generateTorrentManifest(), 'component')

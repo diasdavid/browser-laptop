@@ -1,0 +1,14 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+<style type="text/css">
+	.st49{fill:none;stroke:#EFEFEF;stroke-width:3;stroke-miterlimit:10;}
+	.st50{fill:none;stroke:#1C1C1C;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st51{fill:none;stroke:#EFEFEF;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+</style>
+<path class="st49" d="M144.3,150.8c1.3,12.2,0,30.2,22.5,30.5c22.8,0.3,22.7-15.6,22.5-27.8l0,0c1.4-3.5,5.2-5.8,9.7-5.8h1
+	c4.5,0,8.3,2.3,9.7,5.8l0,0c-0.1,12.2-0.2,27.6,22.5,27.8c22.6,0.1,20.9-18,22.5-30.5"/>
+<path class="st50" d="M180.9,145.2c6.7,1.9,8.4,9.2,8.4,9.2l0.8-4.6c0,0-5.3-6.1-23.1-6.1l-25.1,1l2,5.3c0,0,3.6-5.5,9.7-5.8"/>
+<line class="st51" x1="143.4" y1="145.8" x2="146.4" y2="145.8"/>
+<path class="st50" d="M218,145.2c-6.7,1.9-8.4,9.2-8.4,9.2l-0.8-4.6c0,0,5.3-6.1,23.1-6.1l25.1,1l-2,5.3c0,0-3.6-5.5-9.7-5.8"/>
+<line class="st51" x1="255.5" y1="145.8" x2="252.5" y2="145.8"/>
+</svg>

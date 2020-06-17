@@ -1,0 +1,33 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#A2D8C0;}
+	.st11{fill:#F2CC7B;}
+	.st12{fill:#C8B8F2;}
+	.st13{fill:#FC7E7E;}
+	.st16{fill:#FFFFFF;}
+</style>
+<path class="st16" d="M164.7,110.2L164.7,110.2l16.6-43l16.6-43l16.6,43l16.6,43C209.6,117.1,186.4,117.1,164.7,110.2z"/>
+<g>
+	<defs>
+		<path id="SVGID_9_" d="M168,111.1c-1.7-0.5-2.7-2.4-2-4.1l15.4-39.9l13.8-35.6c1-2.6,4.7-2.6,5.7,0l13.8,35.6l15.5,40
+			c0.6,1.6-0.3,3.4-1.9,3.8C208.5,116.8,187.6,116.8,168,111.1z"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_9_"  style="overflow:visible;"/>
+	</clipPath>
+	<g style="clip-path:url(#SVGID_2_);">
+		<circle class="st12" cx="175.2" cy="101.4" r="3.6"/>
+		<circle class="st0" cx="188" cy="89.1" r="3.6"/>
+		<circle class="st11" cx="198.4" cy="103.9" r="3.6"/>
+		<circle class="st13" cx="179.2" cy="73.5" r="3.6"/>
+		<circle class="st12" cx="189.2" cy="58.5" r="3.6"/>
+		<circle class="st11" cx="198.8" cy="74.2" r="3.6"/>
+		<circle class="st13" cx="209.4" cy="88.9" r="3.6"/>
+		<circle class="st0" cx="217.7" cy="72.2" r="3.6"/>
+		<circle class="st12" cx="221.7" cy="100.9" r="3.6"/>
+		<circle class="st13" cx="207.1" cy="58.3" r="3.6"/>
+		<circle class="st0" cx="198.4" cy="42.6" r="3.6"/>
+	</g>
+</g>
+</svg>
